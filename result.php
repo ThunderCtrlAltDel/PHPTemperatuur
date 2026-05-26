@@ -2,7 +2,7 @@
 include 'head.php';
 
 
-function berekenTemperatuur($graden, &van_eenheid, $naar_eenheid) {
+function berekenTemperatuur($graden, $van_eenheid, $naar_eenheid) {
 
 if ($van_eenheid === $naar_eenheid) {
     return $graden;
@@ -10,7 +10,7 @@ if ($van_eenheid === $naar_eenheid) {
 
 $resultaat = 0;
 
-if ($van_eenheid === 'celsius' {
+if ($van_eenheid === 'celsius') {
     if ($naar_eenheid === 'fahrenheit') {
         $resultaat = $graden * 1.8 + 32;
     }
