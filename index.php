@@ -7,7 +7,7 @@ include 'head.php';
 </header>
 
 <main>
-    <p>Gebruik onderstaande rekentool om snel om te rekenen tussen de verschillende temperatuureenhden (Celsius, Kelvin en Fahrenheit):</p>
+    <p>Gebruik onderstaande rekentool om snel om te rekenen tussen de verschillende temperatuureenheden (Celsius, Kelvin en Fahrenheit):</p>
     <h2>Temperatuur Omrekenen</h2>
 
 <form action="result.php" method="POST">
