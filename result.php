@@ -41,4 +41,34 @@ return $resultaat;
 
 }
 
+if (isset($_POST['berekenen'])) {
+    $graden = floatval($_POST['graden']);
+    $van_eenheid = $_POST['van_eenheid'];
+    $naar_eenheid = $_POST['naar_eenheid'];
+
+    $berekend = berekenTemperatuur($graden, $van_eenheid, $naar_eenheid);
+
+    $toonResultaat = $graden . " " . ucfirst($van_eenheid) . " is gelijk aan " . round($berekend, 2) . " " . ucfirst($naar_eenheid);  
+}
+
+else { 
+    $toonResultaat = "Geen gegevens ontvangen. Ga terug naar de rekentool.";
+}
+
+?>
+
+<header>
+    <h1>Resultaat Berekening</h1>
+</header>
+
+<main>
+    <div>
+        <h2><?php echo $toonResultaat; ?></h2>
+    </div>
+    
+    <p><a href="index.php">&lt;&lt; Terug naar de rekentool</a></p>
+</main>
+
+<?php
+include 'footer.php';
 ?>
