@@ -7,5 +7,20 @@ h1 {
     font-weight: bold;
 }
 
+.language-switcher {
+    float: right;
+}
+
+.language-switcher a {
+    text-decoration: none;
+    color: #333;
+    font-weight: normal;
+}
+
+.language-switcher a.active {
+    font-weight: bold;
+    color: #007BFF;
+}
+
 
 
