@@ -1,6 +1,6 @@
 <?php 
 include 'head.php'; 
-$translation = $GLOBALS['translation'] ?? [];
+$translation = $GLOBALS['translation'] ?? 'nl';
 ?>
 
 <header>
@@ -11,7 +11,7 @@ $translation = $GLOBALS['translation'] ?? [];
     <p><?php echo $translation['explanation']; ?></p>
     <h2><?php echo $translation['title']; ?></h2>
 
-    <form action="result.php" method="POST">
+    <form action="result.php?lang=<?php echo $current_language; ?>" method="POST">
         <input type="number" step="1" name="graden" required>
 
         <select name="van_eenheid"> 
