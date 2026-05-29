@@ -46,16 +46,16 @@ if (isset($_POST['berekenen']) || isset($_SESSION['last_calc'])) {
 
     $berekend = berekenTemperatuur($graden, $van_eenheid, $naar_eenheid);
 
-    $isGelijkAan = $translation['is_equal_to'] ?? 'is gelijk aan';
+    $isGelijkAan = $translation['is_equal_to'];
     $toonResultaat = $graden . " " . ucfirst($van_eenheid) . " " . $isGelijkAan . " " . round($berekend, 2) . " " . ucfirst($naar_eenheid);  
 } 
 else { 
-    $toonResultaat = $translation['no_data'] ?? "Geen gegevens ontvangen. Ga terug naar de rekentool.";
+    $toonResultaat = $translation['no_data'];
 }
 ?>
 
 <header>
-    <h1><?php echo $translation['result_title'] ?? "Resultaat Berekening"; ?></h1>
+    <h1><?php echo $translation['result_title']; ?></h1>
 </header>
 
 <main>
@@ -63,10 +63,9 @@ else {
         <h2><?php echo $toonResultaat; ?></h2>
     </div>
     
-    <p><a href="index.php">&lt;&lt; <?php echo $translation['back_link'] ?? "Terug naar de rekentool"; ?></a></p>
+    <p><a href="index.php">&lt;&lt; <?php echo $translation['back_link']; ?></a></p>
 </main>
 
 <?php
 include 'footer.php';
-?>
 ?>
