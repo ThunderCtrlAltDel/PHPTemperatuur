@@ -1,6 +1,7 @@
 <?php 
 include 'head.php'; 
 $translation = $GLOBALS['translation'] ?? 'nl';
+$current_language = $GLOBALS['current_language'] ?? 'nl';
 ?>
 
 <header>
